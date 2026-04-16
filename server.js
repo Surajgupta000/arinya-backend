@@ -13,14 +13,7 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://arinya-shree-store.vercel.app", 
-    "https://your-site.vercel.app" // Placeholder for their actual vercel domain
-  ],
-  credentials: true
-})); // Allows your React app to talk to this server
+app.use(cors()); // Allows your React app to talk to this server
 app.use(express.json()); // Allows server to read JSON data
 
 // API Routes
